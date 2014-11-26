@@ -69,7 +69,7 @@ tie *ARGV, 'Fake::ARGV';
     sub READLINE {
         my $self = shift;
 
-        while( ! $self->{ended} and @::next <= $NP::next ) {
+        while( ! $self->{ended} and @::n <= $NP::next ) {
             my $line = readline $self->{handle};
             if ( not defined $line ) {
                 redo if $self->next_file;
