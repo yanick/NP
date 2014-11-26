@@ -25,6 +25,9 @@ module has been loaded via C<-MNP=x,y>, the two arrays will contain
 up to the I<x> previous and I<y> next values read from C<ARGV>. If one of the
 limits is not given, it's assumed to be zero.
 
+Note that C<@n> is in descending order. I.e.: C<$n[0]> is the previous line,
+C<$n[1]> the one before that, etc.
+
 =head1 CAVEATS
 
 If C<-l> is being used, the lines won't be C<chomp>ed in C<@p> and C<@n>.
